@@ -94,7 +94,7 @@ nav ul li a:hover {
     margin-top: 60px;
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 45px;
 }
 
 .container > section {
@@ -106,7 +106,7 @@ nav ul li a:hover {
 
 .info {
     display: flex;
-    /* gap: 30px; */
+    gap: 50px;
 }
 
 .info h1 {
@@ -142,7 +142,7 @@ nav ul li a:hover {
 
 .container > aside > h2 {
     color: var(--soft-orange);
-    margin-top: 10x;
+    margin-top: 0px;
     font-size: 3rem;
 }
 
