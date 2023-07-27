@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmet</title>
+</head>
+<body>
+    
+    <!-- 
+        > -- İcinde Oge
+        + -- Kardes Oge
+        ^ -- Uste Cik  
+        {icindeki yazi}
+        * --  X kadar cogalt
+        . -- class
+        # -- id
+        () -- gruplar
+        lorem -- anlamsiz kelimeler olusturur
+        $ -- sirali islem baslat
+        [] -- attr kullanimi
+     -->
+
+    <!-- . -> classlar ile calismak -->
+     <div class="css html js"></div>
+     <!-- .css.html.python.js.vscode -->
+     <div class="css html python js vscode"></div>
+
+     <!-- # -> id bir adet olabilir -->
+     <div id="tcno1234">1</div>
+     <div id="tcno1234">bu olmamali.. 2</div>
+
+     <!-- .container.bg-dark.p-4#content -->
+     <div class="container bg-dark p-4" id="content"></div>
+
+     <h1 class="text-dark py-4 px-2" id="first-header"></h1>
+
+     <!-- Emmet 2.Bolum -->
+
+     <!-- h1>{icindeki yazi} -->
+     <h1>some text</h1> 
+
+     <!-- ul>li>{some text} -->
+     <ul>
+        <li>some text</li>
+     </ul>
+
+
+     <!-- + Kardes Etiketler -->
+
+     <!-- h1+p -->
+     <h1></h1>
+     <p></p>
+
+     
+     <!-- h1+h2+h3+p -->
+     <h1></h1>
+     <h2></h2>
+     <h3></h3>
+     <p></p>
+
+
+     <!-- h1>{icindeki yazi}^h2>{some text}^h3>{h3 text}^p{paragraf yazisi} -->
+     <h1>icindeki yazi</h1>
+     <h2>some text</h2>
+     <h3>h3 text</h3>
+     <p>paragraf yazisi</p>
+
+
+     <!-- Lorem Ipsum Nedir? -->
+     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores sed temporibus praesentium quibusdam. Ipsam, assumenda? Doloribus expedita dolores minima, qui inventore corrupti cum quas ipsa exercitationem. Illo accusantium quo voluptate?</p>
+
+     <!-- p>lorem5 -->
+     <p>Lorem ipsum dolor sit amet.</p>
+
+     <!-- h1>lorem5^h2>lorem3^h3>lorem8^h4>lorem1^p>lorem20 -->
+     <h1>Lorem ipsum dolor sit amet.</h1>
+     <h2>Lorem, ipsum dolor.</h2>
+     <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
+     <h4>Lorem.</h4>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa eius velit, voluptas est corporis aut officiis minima? Libero, magni sed?</p>
+
+
+     <!-- * kullanimi : h1>lorem5^h2>lorem3^h3>lorem8^h4>lorem1^p*3>lorem20 -->
+     <h1>Lorem ipsum dolor sit amet.</h1>
+     <h2>Lorem, ipsum dolor.</h2>
+     <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h3>
+     <h4>Lorem.</h4>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime officia praesentium voluptates aliquam. Aliquam quos minima sequi impedit quis distinctio?</p>
+     <p>Officia, laborum omnis? Obcaecati unde dolor vel, exercitationem praesentium perferendis earum id veniam in, temporibus fuga, magni voluptates nesciunt possimus?</p>
+     <p>Suscipit architecto placeat, ipsam natus sed asperiores fugit pariatur rem repudiandae sequi similique voluptatem odio. Obcaecati neque perspiciatis tenetur ipsa!</p>
+
+     <!-- Basit Hali -->
+
+     <!-- ul>li*3 -->
+     <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+     </ul>
+
+     <!-- ul>li*3>lorem3 -->
+     <ul>
+        <li>Lorem, ipsum dolor.</li>
+        <li>Placeat, unde tempora!</li>
+        <li>Dolorum, doloremque quae!</li>
+     </ul>
+
+     <!-- ul*3>li*5>lorem1 -->
+     <ul>
+        <li>Lorem.</li>
+        <li>Alias.</li>
+        <li>Neque!</li>
+        <li>Sequi.</li>
+        <li>Cum!</li>
+     </ul>
+     <ul>
+        <li>Lorem.</li>
+        <li>Hic.</li>
+        <li>Consequuntur.</li>
+        <li>Assumenda!</li>
+        <li>Veniam?</li>
+     </ul>
+     <ul>
+        <li>Lorem.</li>
+        <li>Magni!</li>
+        <li>Ea.</li>
+        <li>Consectetur.</li>
+        <li>Eveniet.</li>
+     </ul>
+
+    <!-- Bilgileri Birlestir -->
+    <!-- h1 class title olsun, h2 class sub-title, 3 paragraf icinde lorem 2 ul icinde yine .item class bilgisi olan 5 li olsun -->
+
+    <!-- h1.title>lorem1^h2.sub-title>lorem3^p*3>lorem2^ul*2>li.item*5>lorem1 -->
+    <h1 class="title">Lorem.</h1>
+    <h2 class="sub-title">Lorem, ipsum dolor.</h2>
+    <p>Lorem, ipsum.</p>
+    <p>Ratione, eaque?</p>
+    <p>Dolorem, sequi.</p>
+    <ul>
+        <li class="item">Lorem.</li>
+        <li class="item">Repudiandae.</li>
+        <li class="item">Praesentium.</li>
+        <li class="item">Laudantium.</li>
+        <li class="item">Tempore!</li>
+    </ul>
+    <ul>
+        <li class="item">Lorem.</li>
+        <li class="item">Et!</li>
+        <li class="item">Iusto.</li>
+        <li class="item">Laboriosam.</li>
+        <li class="item">Repellat.</li>
+    </ul>
+
+     
+     <!-- Birden fazla bilginin gruplanmasi -->
+
+     <!-- h1.title>lorem1^(h2.sub-title>lorem3^p*3>lorem2^ul*2>li.item*5>lorem1)*2 -->
+     <h1 class="title">Lorem.</h1>
+     <h2 class="sub-title">Lorem, ipsum dolor.</h2>
+     <p>Lorem, ipsum.</p>
+     <p>Blanditiis, tenetur?</p>
+     <p>Repellat, neque?</p>
+     <ul>
+        <li class="item">Lorem.</li>
+        <li class="item">Inventore.</li>
+        <li class="item">Doloremque!</li>
+        <li class="item">Rem!</li>
+        <li class="item">Ipsa.</li>
+     </ul>
+     <ul>
+        <li class="item">Lorem.</li>
+        <li class="item">Dolore!</li>
+        <li class="item">Illum?</li>
+        <li class="item">Numquam.</li>
+        <li class="item">Aliquid.</li>
+     </ul>
+     <h2 class="sub-title">Cum, accusantium aut.</h2>
+     <p>Lorem, ipsum.</p>
+     <p>Explicabo, deleniti?</p>
+     <p>Dignissimos, magni.</p>
+     <ul>
+        <li class="item">Lorem.</li>
+        <li class="item">Ad.</li>
+        <li class="item">Numquam?</li>
+        <li class="item">Quos.</li>
+        <li class="item">Cum.</li>
+     </ul>
+     <ul>
+        <li class="item">Lorem.</li>
+        <li class="item">Velit!</li>
+        <li class="item">Error?</li>
+        <li class="item">Eveniet?</li>
+        <li class="item">Eum!</li>
+     </ul>
+
+
+     <!-- $ kullanimi -->
+
+     <!-- ul>li*5>{item -- $} -->
+     <ul>
+        <li>item -- 1</li>
+        <li>item -- 2</li>
+        <li>item -- 3</li>
+        <li>item -- 4</li>
+        <li>item -- 5</li>
+     </ul>
+     
+     <!-- ul>li.item-$*5>{item -- $} -->
+     <ul>
+        <li class="item-1">item -- 1</li>
+        <li class="item-2">item -- 2</li>
+        <li class="item-3">item -- 3</li>
+        <li class="item-4">item -- 4</li>
+        <li class="item-5">item -- 5</li>
+     </ul>
+
+     <!-- h2.# -->
+     <h2 class="" id=""></h2>
+     <!-- h2.#*3 -->
+     <h2 class="1" id="2">3</h2>
+     <h2 class="1" id="2">3</h2>
+     <h2 class="1" id="2">3</h2>
+
+
+     <!-- p[title="info"]>lorem1 -->
+     <p title="info">Lorem.</p>
+
+     <!-- img[src="http://"] -->
+     <img src="http://" alt="">
+
+     <!-- ul>li*4>img[src="#" alt="info"] -->
+     <ul>
+        <li><img src="#" alt="info"></li>
+        <li><img src="#" alt="info"></li>
+        <li><img src="#" alt="info"></li>
+        <li><img src="#" alt="info"></li>
+     </ul>
+
+
+
+
+
+</body>
+</html>

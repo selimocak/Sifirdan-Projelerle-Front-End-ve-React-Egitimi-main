@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+
+
+  * {
+    background-color: lightsalmon;
+  }
+
+    div {
+      background-color: aqua;
+    }
+
+    div.container {
+      background-color: red;
+    }
+
+    div.info {
+      background-color: brown;
+    }
+
+    .info-1 {
+      background-color: red;
+    }
+
+    .info-1.info-2 {
+      background-color: chocolate;
+    }
+
+    .container > div > .span-info {
+      background-color: darkorange;
+    }
+
+    article > h1 {
+      background-color: purple;
+    }
+
+    body > h1 {
+      background-color: pink;
+      font-size: 50px;
+    }
+
+
+    h2 {
+      font-size: 10px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      background-color: peru;
+    }
+
+    h1, h1.title, h2, h2.title, h3, h4, h5, h6 {
+      background-color: peru;
+    }
+
+    .bg-info, .bg-primary, .bg-danger {
+
+    }
+
+
+  </style>
+  <title>CSS Secicileri</title>
+</head>
+
+<!-- https://www.w3schools.com/cssref/css_selectors.php -->
+
+<body>
+
+  <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores, amet.</h1>
+
+  <h2>Lorem, ipsum dolor.</h2>
+  <h3>Lorem, ipsum dolor.</h3>
+  <h4>Lorem, ipsum dolor.</h4>
+  <h5>Lorem, ipsum dolor.</h5>
+  <h6>Lorem, ipsum dolor.</h6>
+
+  <article>
+    <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, earum?</h1>
+  </article>
+    <div class="container">
+      <div class="info">Lorem, ipsum dolor.</div>
+    </div>
+
+    <p class="info">Lorem ipsum dolor sit amet.</p>
+
+    <p class="info-1 info-2"> Info: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, minus.</p>
+
+    <div class="container"><span class="info"></span></div>
+
+    <div class="container">
+      <span class="span-info">
+        container icindeki span info
+      </span>
+      <div>
+        <span class="span-info">
+          div icindeki span info
+        </span>
+      </div>
+    </div>
+
+    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, ullam!</div>
+</body>
+</html>

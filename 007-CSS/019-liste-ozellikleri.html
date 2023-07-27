@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+    }
+
+    .nav {
+      margin: 20px 0;
+    }
+
+    .nav > li {
+      float: left;
+      margin-right: 10px;
+    }
+
+    .clear-fix {
+      clear: both;
+    }
+
+    ul {
+      list-style: none;
+      margin-left: 0;
+      padding: 0;
+    }
+    ul > li {
+      margin-left: 0;
+    }
+
+    .box {
+      margin: 20px auto 0;
+      width: 600px;
+    }
+
+    .box > p {
+      margin: 30px 0;
+    }
+
+    .mb-10px {
+      margin-bottom: 10px;
+    }
+
+    ol {
+      list-style-type: decimal-leading-zero;
+    }
+
+    .nav-2 > li:hover {
+      background-color: aqua;
+    }
+
+    .nav-2 >li > a {
+      display: block;
+    }
+  </style>
+  <title>List Ozellikleri</title>
+</head>
+<body>
+  <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/list-style -->
+  <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type -->
+  <div class="box">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, saepe expedita sit blanditiis laborum autem alias iusto. Numquam corporis eum, ducimus debitis minima nesciunt nobis facere molestias, voluptatem similique quasi!</p>
+    <ul class="mb-10px">
+      <li>Lorem.</li>
+      <li>Dignissimos?</li>
+      <li>Illum.</li>
+      <li>Sed.</li>
+      <li>Voluptatum.</li>
+    </ul>
+
+    <ul class="mb-10px nav-2">
+      <li><a href="https://google.com" target="_blank">Lorem.</a></li>
+      <li><a href="https://google.com" target="_blank">Obcaecati?</a></li>
+      <li><a href="https://google.com" target="_blank">Sint.</a></li>
+      <li><a href="https://google.com" target="_blank">Dignissimos.</a></li>
+      <li><a href="https://google.com" target="_blank">Est.</a></li>
+    </ul>
+
+    <ul class="mb-10px nav">
+      <li><a href="">Lorem.</a></li>
+      <li><a href="">Earum.</a></li>
+      <li><a href="">Placeat.</a></li>
+      <li><a href="">Iusto.</a></li>
+      <li><a href="">Aspernatur?</a></li>
+    </ul>
+    <div class="clear-fix"></div>
+    <hr>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque quas at corporis autem libero obcaecati nobis hic doloribus porro nihil consequatur esse quasi nisi molestias, voluptates repellat vitae velit! Dolore.</p>
+    <ol class="mb-10px">
+      <li>Lorem.</li>
+      <li>Reprehenderit!</li>
+      <li>Illo?</li>
+      <li>Tempore!</li>
+      <li>Rem.</li>
+    </ol>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* :root */
+    :root {
+      /* HSL nin iki paratmetresi verildi */
+      --bg-color: 28 80%;
+      --border-color: #c0392b;
+      --padding-size: 20px;
+      /* denedik ama image simdilik calismiyor */
+      --img1: https://picsum.photos/id/237/500/300;
+      --img2: https://picsum.photos/id/230/300/300;
+    }
+
+    /* degiskenin taniminin yapildigi yere gore kullanim limitleri */
+    
+    .box {
+      /* degisken tanimlama */
+      /* --bg-color: #e67e22;
+      --border-color: #c0392b;
+      --padding-size: 20px; */
+      width: 600px;
+      /* degisken kullanimi */
+      background-color: hsl(var(--bg-color) 50%);
+      margin-bottom: 10px;
+      padding: var(--padding-size);
+      /* border: 10px solid var(--border-color); */
+      border: 10px solid hsl(var(--bg-color) 42%);
+      /* border-image: url(var(var(--img1))) */
+    }
+
+    .box:hover {
+      background-color: var(--border-color);
+      /* border: 10px solid hsl(var(--bg-color)); */
+      border: 10px solid hsl(var(--bg-color) 50%);
+    }
+    
+    .info {
+      /* Kullanamadik  */
+      background-color: var(--bg-color);
+    }
+
+  </style>
+  <title>CSS Degiskenleriyle Calismak ve ROOT Kullanimi</title>
+</head>
+<body>
+  <div class="box">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, at?</div>
+  <div class="box">A, saepe consectetur. Voluptatem incidunt quaerat eum sint unde enim!</div>
+  <div class="box">Velit labore fuga fugiat dolorem quasi, tenetur animi quae veritatis.</div>
+
+  <div class="info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, ex autem fuga commodi numquam voluptas necessitatibus, in voluptatibus officiis temporibus cum. Commodi, dolore rem accusantium animi veritatis cum cupiditate? Iste.</div>
+</body>
+</html>

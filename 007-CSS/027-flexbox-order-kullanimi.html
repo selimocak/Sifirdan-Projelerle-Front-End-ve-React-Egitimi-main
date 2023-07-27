@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+    --green: #2ecc71;
+    --blue: #3498db;
+    --yellow: #f1c40f;
+    --red: #e74c3c;
+    --dark-blue: #34495e;
+    --midnight-blue: #2c3e50;
+    --light-white: #ecf0f1;
+    --silver: #bdc3c7;
+    }
+    body {
+      background-color: var(--silver);
+      margin: 0;
+      padding: 0;
+    }
+
+    main {
+      background-color: var(--light-white);
+      width: 800px;
+      margin: 0 auto;
+      display: flex;
+      padding: 20px;
+      border-radius: 20px;
+    }
+
+    
+
+    @media (max-width: 575px) { 
+      /* Mobile */
+      main {
+        flex-direction: column;
+        width: calc(100% - 60px);
+      }
+      aside {
+      order: 1;
+    }
+    }
+  </style>
+  <title>Flexbox Order Kullanimi</title>
+</head>
+<body>
+  
+  <main class="comtainer">
+    <aside>
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="">Lorem.</a></li>
+        <li><a href="">Soluta.</a></li>
+        <li><a href="">Nisi.</a></li>
+        <li><a href="">Possimus.</a></li>
+        <li><a href="">Cumque.</a></li>
+      </ul>
+    </aside>
+    <section>
+      <article>
+        <h2>Lorem, ipsum.</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, voluptatibus!</p>
+        <p>Animi omnis itaque commodi molestias in nostrum quaerat explicabo illum!</p>
+        <p>Similique impedit quos tempora a, molestiae obcaecati est temporibus debitis?</p>
+      </article>
+      <article>
+        <h2>Odit, fugit!</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, eius.</p>
+        <p>Alias, corrupti dolores tempora vel repellat molestias laborum voluptas earum!</p>
+        <p>Neque reiciendis ad eum non a! Amet itaque voluptatum error.</p>
+      </article>
+      <article>
+        <h2>Dolorum, magnam.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ab!</p>
+        <p>Consequuntur laboriosam assumenda voluptatibus ea omnis quas delectus reprehenderit unde!</p>
+        <p>Fuga laborum vero odio, ea repellat eveniet incidunt blanditiis ex?</p>
+      </article>
+      <article>
+        <h2>Quas, pariatur.</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, deleniti.</p>
+        <p>Eos quaerat culpa earum architecto minus delectus labore quia nostrum?</p>
+        <p>Harum aliquid aperiam rem magni dignissimos, laborum suscipit optio veritatis.</p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+}
+.box {
+  background-color: #ff4d4d;
+  min-height: 400px;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+                      url('../img/dog.jpg');
+  filter: blur(4px);
+  background-size: 30%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:50px center;
+}
