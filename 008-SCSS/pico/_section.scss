@@ -1,0 +1,42 @@
+/* SECTION */
+section {
+    width: 70%;
+}
+
+
+article, 
+    article > header {
+        background-color: var(--body-color);
+    }
+
+    article {
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 8px;
+
+        & > header {
+            padding: 0;
+            border-bottom: none;
+        }
+
+        & > p {
+            margin-bottom: 10px;
+        }
+        
+        & > footer {
+            padding: 10px 0;
+
+            & > a {
+                color: var(--light-white); 
+                padding: 12px 10px;
+                background-color: #34495e;
+                border-radius: 4px;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: #bdc3c7;
+                }
+            }
+        }
+    }
+

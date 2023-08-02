@@ -7,3 +7,10 @@
         background-color: $bg-color;
     }
 }
+
+
+.extend-container-info {
+    @extend .container;
+    background-color: yellowgreen;
+    font-size: 20px;
+}
