@@ -1,0 +1,5 @@
+@media (max-width: 576px) {
+    aside.left-menu {
+        display: none !important;
+    }
+ }
