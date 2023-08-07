@@ -4,8 +4,7 @@ console.count("Count ?")
 console.error("Hata Bilgisini Dikkat Cekmesi Icin Error ile Yazabiliriz")
 
 const user = {
-  firstName: "Hakan",
-  lastName: "Yalcinkaya",
+  firstName: "",
 }
 console.log("log:", user)
 
