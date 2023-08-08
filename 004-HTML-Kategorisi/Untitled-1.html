@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Web Oyunu - Bilmece</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .game-container {
+      text-align: center;
+      padding-top: 100px;
+    }
+    .game-button {
+      font-size: 24px;
+      padding: 15px 30px;
+    }
+    .result-text {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .riddle-text {
+      font-size: 20px;
+      font-style: italic;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="game-container">
+      <h1>Bootstrap Web Oyunu - Bilmece</h1>
+      <p>Tıklanan düğme sayısı: <span id="click-count">0</span></p>
+      <button class="btn btn-primary game-button" id="click-button">Tıkla</button>
+      <p class="result-text" id="result"></p>
+      <p class="riddle-text" id="riddle">Hangi kale içerden asla görülmez?</p>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS ve jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    // Tıklama sayacı
+    let clickCount = 0;
+    const maxClicks = 15; // Oyunu kazanmak için gereken maksimum tıklama sayısı
+    const correctAnswer = "harf";
+
+    // Tıklandığında çalışacak fonksiyon
+    function handleClick() {
+      clickCount++;
+      document.getElementById('click-count').innerText = clickCount;
+      
+      // Oyunu kazanma durumu
+      if (clickCount === maxClicks) {
+        document.getElementById('click-button').setAttribute('disabled', 'disabled');
+        document.getElementById('result').innerText = 'Tebrikler, oyunu kazandınız!';
+      }
+    }
+
+    // Tıklayınca handleClick() fonksiyonunu çağır
+    document.getElementById('click-button').addEventListener('click', handleClick);
+
+    // Cevabın doğru olup olmadığını kontrol et
+    function checkAnswer() {
+      const userAnswer = prompt("Bilmeceyi çözmek için cevabı girin:").toLowerCase();
+      if (userAnswer === correctAnswer) {
+        document.getElementById('click-button').removeEventListener('click', handleClick);
+        document.getElementById('click-button').setAttribute('disabled', 'disabled');
+        document.getElementById('riddle').innerText = "Bilmeceyi doğru cevapladınız!";
+      } else {
+        alert("Maalesef yanlış cevapladınız. Daha fazla tıklamaya devam edin!");
+      }
+    }
+
+    // Bilmeceyi çözmek için checkAnswer() fonksiyonunu çağır
+    document.getElementById('riddle').addEventListener('click', checkAnswer);
+  </script>
+</body>
+</html>

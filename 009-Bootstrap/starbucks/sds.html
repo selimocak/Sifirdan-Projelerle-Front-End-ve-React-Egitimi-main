@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hangi Şekil Doğru?</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f0f0f0;
+      color: #000;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+    .shape {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      border: 2px solid #000;
+      cursor: pointer;
+      /* YENİ: Şekilleri düzgün bir şekilde konumlandırmak için */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* YENİ: Şekil içeriklerinin stilleri */
+    .circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: #2ecc71;
+    }
+    .square {
+      width: 80px;
+      height: 80px;
+      background-color: #3498db;
+    }
+    .triangle {
+      width: 0;
+      height: 0;
+      border-left: 40px solid transparent;
+      border-right: 40px solid transparent;
+      border-bottom: 80px solid #e74c3c;
+    }
+    /* YENİ: Eklenen 2 yeni şekil */
+    .heart {
+      width: 0;
+      height: 0;
+      border-top: 50px solid red;
+      border-left: 50px solid red;
+      border-radius: 50px;
+    }
+    .star {
+      width: 0;
+      height: 0;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      border-bottom: 60px solid yellow;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hangi Şekil Doğru?</h1>
+  <p>Tıklanan düğme sayısı: <span id="click-count">0</span></p>
+  <div id="shape-container">
+    <!-- Şekiller burada olacak -->
+  </div>
+  <p id="result"></p>
+
+  <!-- Bootstrap JS ve jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    // Tıklama sayacı
+    let clickCount = 0;
+    const maxClicks = 5; // Oyunu kazanmak için gereken maksimum tıklama sayısı
+    const shapes = ['circle', 'square', 'triangle', 'heart', 'star']; // Şekillerin isimleri
+    let correctShape; // Doğru şekil
+
+    // Sorular ve şıklar
+    const questions = [
+      {
+        question: "Hangi şekil bir daire?",
+        options: ["circle", "square", "triangle", "heart", "star"],
+        correctAnswer: "circle"
+      },
+      {
+        question: "Hangi şekil bir kare?",
+        options: ["triangle", "square", "circle", "heart", "star"],
+        correctAnswer: "square"
+      },
+      {
+        question: "Hangi şekil bir üçgen?",
+        options: ["triangle", "circle", "square", "heart", "star"],
+        correctAnswer: "triangle"
+      },
+      // Daha fazla soru ekleyebilirsiniz
+    ];
+
+    // Oyunu başlat
+    function startGame() {
+      clickCount = 0;
+      document.getElementById('click-count').innerText = clickCount;
+      document.getElementById('result').innerText = '';
+      generateShapes();
+    }
+
+    // Tıklayınca handleClick() fonksiyonunu çağır
+    function handleClick(selectedAnswer) {
+      if (selectedAnswer === correctShape) {
+        document.getElementById('result').innerText = 'Doğru!';
+        clickCount++;
+      } else {
+        document.getElementById('result').innerText = 'Yanlış! Tekrar deneyin.';
+        clickCount = 0;
+      }
+
+      document.getElementById('click-count').innerText = clickCount;
+
+      // Oyunu kazanma durumu
+      if (clickCount === maxClicks) {
+        setTimeout(() => {
+          document.getElementById('result').innerText = `Tebrikler! ${maxClicks} tıklamayı tamamladınız. Bir sonraki seviyeye geçmeye hak kazandınız.`;
+          clickCount = 0;
+        }, 1000);
+      } else {
+        setTimeout(() => {
+          document.getElementById('result').innerText = '';
+          generateShapes();
+        }, 1000);
+      }
+    }
+
+    // Şekilleri rastgele oluştur
+    function generateShapes() {
+      const container = document.getElementById('shape-container');
+      container.innerHTML = ''; // Önceki şekilleri temizle
+
+      // Rastgele bir soru seç
+      const randomQuestionIndex = Math.floor(Math.random() * questions.length);
+      const question = questions[randomQuestionIndex];
+
+      // Soruyu ekrana yazdır
+      document.getElementById('result').innerText = question.question;
+
+      // Doğru cevabı belirle
+      correctShape = question.correctAnswer;
+
+      // Şıkları karıştır
+      const shuffledOptions = shuffle(question.options);
+
+      // Şekilleri ekle
+      shuffledOptions.forEach(shape => {
+        const shapeDiv = document.createElement('div');
+        shapeDiv.classList.add('shape', shape);
+
+        // Şekil içeriği ekle
+        if (shape === 'circle') {
+          shapeDiv.innerHTML = '<div class="circle"></div>';
+        } else if (shape === 'square') {
+          shapeDiv.innerHTML = '<div class="square"></div>';
+        } else if (shape === 'triangle') {
+          shapeDiv.innerHTML = '<div class="triangle"></div>';
+        } else if (shape === 'heart') {
+          shapeDiv.innerHTML = '<div class="heart"></div>';
+        } else if (shape === 'star') {
+          shapeDiv.innerHTML = '<div class="star"></div>';
+        }
+
+        shapeDiv.addEventListener('click', () => handleClick(shape)); // Şekil tıklandığında kontrol et
+        container.appendChild(shapeDiv);
+      });
+    }
+
+    // Dizi elemanlarını karıştırma fonksiyonu
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    // Oyuna başla
+    startGame();
+  </script>
+</body>
+</html>

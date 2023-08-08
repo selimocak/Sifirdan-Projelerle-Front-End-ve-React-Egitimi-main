@@ -1,0 +1,216 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #0066cc;
+    padding: 10px;
+    color: #fff;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-color: #f0f0f0;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #000;
+  }
+  
+  .hero-description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .hero-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero-button:hover {
+    background-color: #0055aa;
+  }
+  
+  /* Featured Properties Section */
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #000;
+  }
+  
+  .property-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .property-card {
+    flex-basis: calc(33.33% - 40px);
+    margin: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .property-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .property-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+  }
+  
+  .property-description {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .property-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #0066cc;
+  }
+  
+  .property-link {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #0066cc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .property-link:hover {
+    background-color: #0055aa;
+  }
+  
+  /* About Us Section */
+  .section-light {
+    background-color: #f0f0f0;
+    padding: 60px 0;
+  }
+  
+  .section-light .row {
+    align-items: center;
+  }
+  
+  /* Contact Section */
+  .section-contact {
+    padding: 60px 0;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #000;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+  }
+  
+  .contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-button:hover {
+    background-color: #0055aa;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #0066cc;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px; /* Hakkımızda ve footerı sol tarafa ortalamak için margin ekliyoruz */
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  /* Hakkımızda Kısmı */
+  .about-us {
+    margin: 0 auto; /* Hakkımızda bölümünü sol tarafa ortalamak için kullanıyoruz */
+    max-width: 800px;
+    padding: 20px;
+  }
+  
+  /* Media Query */
+  @media screen and (max-width: 768px) {
+    .property-card {
+      flex-basis: calc(50% - 40px);
+    }
+  }
+  
