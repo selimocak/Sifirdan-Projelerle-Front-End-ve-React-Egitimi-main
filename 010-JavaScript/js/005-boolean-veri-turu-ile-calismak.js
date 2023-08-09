@@ -14,4 +14,17 @@ console.log(Boolean("admin")) // true
 console.log(Boolean(1)) // true
 console.log(Boolean(0)) // false
 console.log("0.1", Boolean(0.1)) // true
-console.log(1 > 3) // false
+console.log("1 > 3", 1 > 3) // false
+
+console.log(
+    Boolean(-0)
+)
+
+console.log(Boolean(0 === 0))
+
+user = "qweAsd"
+
+// IF Yapisinda tekrar isleyecegiz.
+console.log("Boolean(user)", Boolean(user))
+console.log("Boolean(user.length > 9)", Boolean(user.length > 9))
+
