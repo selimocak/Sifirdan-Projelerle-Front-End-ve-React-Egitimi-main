@@ -1,56 +1,58 @@
 let price = 100;
 
 console.log(
-  "price",
-  price
+  "price", 
+  price 
 )
 
-console.log(100 + 200)
+console.log(100+200)
 console.log(
-  "price",
+  "price", 
   price + 1000
 )
 
 console.log(
-  "price",
-  price
+  "price", 
+  price 
 )
 
 price + 1000;
 console.log(
-  "price",
+  "price", 
   price
 )
 
 price = 1000;
 console.log(
-  "price -> 1100 ?  ",
+  "price -> 1100 ? ", 
   price
 )
 
-// eski bilgiye tekrar esitledim
+
+// Eski bilgiye tekrar esitledim.
 price = 100;
 
 price = price + 1000;
 console.log(
-  "price -> 1100 ?  ",
+  "price -> 1100 ? ", 
   price
 )
 
 
-// eski bilgiye tekrar esitledim
+// Eski bilgiye tekrar esitledim.
 price = 100;
 price += 1000;
 
 console.log(
-  "price -> 1100 ?  ",
+  "price -> 1100 ? ", 
   price
 )
 
 
-// arttirma ve azatlma islemleri
+// Arttirma ve azaltma islemleri
 let count = 0;
 
+count ++;
 count ++;
 count ++;
 count ++;
@@ -79,5 +81,6 @@ const totalPrice = price + (price * tax)
 
 console.log("totalPrice", totalPrice)
 
-console.log(2 + 8 * 10, "Sonuc: 100?")
-console.log( (2 + 8) * 10, "Sonuc: 100?")
+console.log(2 + 8 * 10, "Sonuc: 100 ?")
+console.log((2 + 8) * 10, "Sonuc: 100 ?")
+
