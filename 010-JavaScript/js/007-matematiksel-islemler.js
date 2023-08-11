@@ -21,6 +21,12 @@ console.log(3 ** 4)
 console.log("Asagi yuvarlama", Math.floor(3.9))
 
 // yukari yuvarlama:
+console.log("Yukari yuvarlama", Math.ceil(3.9))
 
 
 // yakina yuvarlama:
+console.log("Yakina yuvarlama 3.9",  Math.round(3.9))
+console.log("Yakina yuvarlama 3.6",  Math.round(3.6))
+console.log("Yakina yuvarlama 3.5",  Math.round(3.5))
+console.log("Yakina yuvarlama 3.49", Math.round(3.49))
+console.log("Yakina yuvarlama 3.4",  Math.round(3.4))
