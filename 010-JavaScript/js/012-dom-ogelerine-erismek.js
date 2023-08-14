@@ -1,6 +1,5 @@
 // https://developer.mozilla.org/en-US/docs/Web/API/Document/title
-
-// document.title = prompt("En Sevdigin Dil Nedir?", "JS")
+// document.title = prompt("En sevdigin dil nedir ? ", "JavaScript")
 
 document.title = "JS -> ES6+"
 
@@ -14,16 +13,18 @@ console.log(
 
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById
-// document.getElementById('title').innerHTML = 'js'
+// document.getElementsById('title').innerHTML = 'js'
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName
 console.log(
   document.getElementsByClassName('text-primary')
 )
 
+
+// Bundan sonra secim icin sadece asagidaki iki yontemi kullanacagiz;
 // https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
-// Bundan sonra secim icin sadece asagidaki iki yontemi kullacagiz;
-// etikele sec:
+
+// etiketle sec:
 const h1Element = document.querySelector('h1')
 const firstTitleClass = document.querySelector('.title')
 const titleId = document.querySelector('#title')
@@ -40,6 +41,6 @@ const spanElement = document.querySelector('#info>p>span')
 console.log(spanElement)
 
 
-// birden fazla etiket secmek ?
-const listItems = document.querySelectorAll('li.list-item')
+// birden fazla etiket secmek ? 
+const listItems = document.querySelectorAll('.list-item')
 console.log(listItems)
