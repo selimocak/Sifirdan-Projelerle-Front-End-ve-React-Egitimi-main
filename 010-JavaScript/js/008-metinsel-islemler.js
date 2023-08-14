@@ -43,7 +43,7 @@ console.log(
     " " + lastName.charAt(0).toUpperCase() + lastName.slice(1).toLowerCase()
 )
 
-console.log(
+console.log(    
     'training.includes("JAVASCRIPT")',
     training.includes("JAVASCRIPT")
 )

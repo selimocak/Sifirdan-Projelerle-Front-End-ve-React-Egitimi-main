@@ -1,8 +1,13 @@
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 
 let firstName = "sElim"
+<<<<<<< HEAD
 let lastName = "AsdfJJJS"
 let training = "Template Literals JS"
+=======
+let lastName = 'Asdsf'
+let training = `Template Literals JS`
+>>>>>>> 259892c9bfa7852a1a187a42e91894bbca7241e2
 let age = 35
 
 let info = `${firstName} ${lastName}`
