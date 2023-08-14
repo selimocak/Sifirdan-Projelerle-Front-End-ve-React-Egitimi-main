@@ -7,9 +7,8 @@
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog
 
 
-// Prompt:
-
-// const info = prompt("En Sevdiginiz Yazilim Dili Hangisi", "Python")
+// Prompt :
+// const info = prompt("Adinizi Giriniz..", "Ali")
 
 // Alert:
 // alert(info)
@@ -17,9 +16,9 @@
 // console.log(info)
 
 // console.log(
-//   confirm("Kullanici Silinsin mi?")
+//     confirm("Kullanici silinsin mi ? ")
 // )
 
-// if (confirm("Kullanici Silinsin mi")) {
-//   console.log("Kullanici Sildindi..")
+// if (confirm("Kullanici silinsin mi ? ")) {
+//     console.log("Kullanici silindi..")
 // }
