@@ -1,5 +1,4 @@
-// DOM icinde Yeni Oge Olusturmak..
-// const todoList = document.querySelector('#todoList')
+// DOM icinde yeni oge olusturmak.
 const todoList = document.querySelector('ul#todoList')
 
 // const todoFirstItem = document.querySelector('ul>.list-item')
@@ -7,24 +6,23 @@ const todoList = document.querySelector('ul#todoList')
 const todoFirstItem = document.querySelector('ul#todoList>li:first-child')
 const todoLastItem = document.querySelector('ul#todoList>li:last-child')
 
-console.log(todoList)
+console.log(todoList)   
 console.log(todoFirstItem)
 console.log(todoLastItem)
 
 
-// Hero Info'yu Body icine eklemek
+// Hero infoyu body icine eklemek
 const heroElement = document.createElement('div')
-heroElement.innerHTML = "<h1>Hero Info</h1>"
-// en sona: document.body.append(heroElement)
+heroElement.innerHTML = "<h1>Hero Bilgisi</h1>"
+// en sona : document.body.append(heroElement)
+// en basa : document.body.prepend(heroElement)
 document.body.prepend(heroElement)
 
-
-const userPrompt = prompt("Yapilacak Islere Eklenecek Bilgi: ")
+const userPrompt = prompt("XDXDXDXDXD ? ")
 
 // console.log(userPrompt)
 
 const newTodoElement = document.createElement('li')
 newTodoElement.innerText = userPrompt
 
-// todoList.append(newTodoElement)  // sona ekler
-todoList.prepend(newTodoElement) // basa ekler
+todoList.prepend(newTodoElement)
