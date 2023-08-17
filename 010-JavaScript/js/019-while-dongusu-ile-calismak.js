@@ -7,9 +7,7 @@
 //   console.log(counter)
 //   counter ++;
 // }
-
-// TC length 11 olacak
-// 12345678900
+// tc 12345678900
 
 let userId = prompt("TC No Giriniz: ")
 
@@ -20,9 +18,10 @@ while (userId.length !== 11) {
 
 let userAge = prompt("Yasinizi Giriniz: ")
 
-while ( !(userAge >= 18 && userAge <= 99) ) {
+while (!(userAge >= 18 && userAge <= 99)) {
   console.log("While Calisti..")
   userAge = prompt("Yasinizi Giriniz: ")
 }
 
-console.log("While dan sonra sistemim calismaya devam ediyor..")
+
+console.log("While dan sonra sistem calismaya devam ediyor.") 
