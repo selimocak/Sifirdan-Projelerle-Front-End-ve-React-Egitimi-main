@@ -51,7 +51,7 @@ function multiply_with_return(num1, num2) {
   return num1 * num2
 }
 
-const result = multiply_with_return(10, 30)
+const result = multiply_with_return(10, 30) 
 // console.log(result) 
 
 
