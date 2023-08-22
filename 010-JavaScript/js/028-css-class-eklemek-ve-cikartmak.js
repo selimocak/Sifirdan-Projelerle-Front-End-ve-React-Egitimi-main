@@ -3,8 +3,8 @@
 const titleElement = document.querySelector('#title')
 
 console.log(titleElement.classList)
-titleElement.classList.remove("text-primary", "title") // ister bir class ister birden fazla class silebilirsiniz..
+titleElement.classList.remove("text-primary")  // ister bir class ister birden fazla class silebiliriz.
 
-titleElement.classList.add("text-info", "display-1") // ister bir class ister birden fazla class ekleyebilirsiniz..
+titleElement.classList.add("text-danger", "display-1")  // ister bir class ister birden fazla class ekleyebiliriz. 
 
-titleElement.classList.toggle('bg-primary') // ekle veya cikar..
+titleElement.classList.toggle("bg-primary")  // ekle veya cikar. 
