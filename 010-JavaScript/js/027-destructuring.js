@@ -43,4 +43,16 @@ const hello = (obj) => {
   console.log(obj.firstName, obj.lastName, obj.age)  
 }
 
-hello(user) 
+const helloV2 = ( {firstName, lastName, age} ) => {
+  console.log(firstName, lastName, age)  
+}
+
+const helloV3 = ( obj ) => {
+  const {firstName, lastName, age} = obj
+  console.log(firstName, lastName, age)  
+} 
+
+helloV2(user) 
+helloV3(user)  
+
+
