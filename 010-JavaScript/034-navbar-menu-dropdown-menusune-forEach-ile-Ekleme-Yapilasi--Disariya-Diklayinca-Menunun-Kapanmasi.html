@@ -114,12 +114,13 @@
       })
     })
     
+    
     // Baska Bir Yere Tiklaninca Menu Kapansin ;)
     document.body.addEventListener('click', (event) => {
       dropDownMenus.forEach(menuItem => {
         const dropDown = menuItem.querySelector('ul.dropdown-menu')
         if (event.target != menuItem && event.target != dropDown) {
-          dropDown.classList.remove('open')
+          dropDown.classList.remove('open')  
         }
       })
     })
