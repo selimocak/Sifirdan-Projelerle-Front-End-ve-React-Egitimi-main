@@ -58,7 +58,7 @@
        <ul class="dropdown-menu">
         <li>xx</li>
         <li>yy</li>
-        <li>zzz</li>
+        <li>zz</li> 
        </ul>
       </li>
       <li>Iletisim</li>
@@ -104,15 +104,17 @@
     </article>
   </section>
 
-  <script>
-    const dropDownMenus = document.querySelectorAll('.dropdown') // 1 -> tum dropdown class olan yapilari sec..
 
-    dropDownMenus.forEach(menuItem => { // 2-> her birini forEach ile dondur..
-      menuItem.addEventListener("click", () => { // 3-> her bir menuye listener ekle..
-        const dropDown = menuItem.querySelector('ul.dropdown-menu') // 4-> menuyu bul
-        dropDown.classList.toggle('open') // open classi ekle
+  <script>
+    const dropDownMenus = document.querySelectorAll('.dropdown')  // 1 -> tum dropdown class olan yapilari sec. 
+
+    dropDownMenus.forEach(menuItem => {  // 2 -> her birini forEach ile dondur.
+      menuItem.addEventListener("click", () => {  // 3 -> her bir menuye listener ekle.
+        const dropDown = menuItem.querySelector('ul.dropdown-menu')  // 4 -> menuyu bul
+        dropDown.classList.toggle('open')  // 5 -> open classi ekle. 
       })
-    })
+    }) 
+
   </script>
   
 </body>
