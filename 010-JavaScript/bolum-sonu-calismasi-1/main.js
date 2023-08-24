@@ -1,3 +1,4 @@
+
 const hexInputContainer = document.querySelector("#hexInputContainer")
 const hexForm = document.querySelector("#hexColorForm")
 const addNew = document.querySelector("#addNew")
