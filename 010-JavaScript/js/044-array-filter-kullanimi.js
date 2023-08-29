@@ -1,3 +1,4 @@
+
 const priceList = [10, 20, 30, 400, 300, 100, 500, 30, 50, 70, 90]
 
 // const newPriceList = priceList.filter(price => {
@@ -23,29 +24,3 @@ const activeUsers = users.filter(user => user.isActive)
 console.log(activeUsers)
 
 
-// complex kullanim:
-/* 
-const newPriceList = priceList.filter(item => {
-  if ((item >= 50 && item <= 100) || (item >= 200 && item <= 400) ) {
-    return true
-  }
-  // if (item >= 200 && item <= 500) {
-  //   return true
-  // }
-  return false
-})
-*/
-
-/*
-const newPriceList = priceList.filter(
-  item => 
-    (item >= 50 && item <= 100) || (item >= 200 && item <= 400) ? true : false
-)
-*/
-
-const newPriceList = priceList.filter(
-  item => 
-    (item >= 50 && item <= 100) || (item >= 200 && item <= 400)
-)
-
-console.log(newPriceList)
