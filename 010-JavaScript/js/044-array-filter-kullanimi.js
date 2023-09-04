@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // 
+=======
+
+>>>>>>> c549ddac9f6c9379a68efbb7a90ecea2e1db5aea
 const priceList = [10, 20, 30, 400, 300, 100, 500, 30, 50, 70, 90]
 
 // const newPriceList = priceList.filter(price => {
@@ -21,6 +25,7 @@ const users = [
 const activeUsers = users.filter(user => user.isActive)
 console.log(activeUsers)
 
+<<<<<<< HEAD
 // complex kullanim : 
 /*
 const newPriceList = priceList.filter(item => {
@@ -44,3 +49,6 @@ const newPriceList = priceList.filter(
 )
 
 console.log(newPriceList)
+=======
+
+>>>>>>> c549ddac9f6c9379a68efbb7a90ecea2e1db5aea
