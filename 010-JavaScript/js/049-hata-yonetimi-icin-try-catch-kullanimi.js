@@ -1,5 +1,5 @@
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch
 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch
 
 try {
   console.log(LOREM)
@@ -14,7 +14,7 @@ async function getData(URL) {
     console.log(jsonData)
   } catch (err) {
     console.error("ERROR::: ", err)
-  }
+  } 
 }
 
 getData('js/047-json-file.json')
