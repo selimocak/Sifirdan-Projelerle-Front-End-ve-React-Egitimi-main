@@ -1,3 +1,4 @@
+
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
 
 // arr.reduce((onceki, simdiki) => {yapilacak islem}, ilkDeger )
@@ -15,19 +16,19 @@ const maxPrice = prices.reduce((acc, current) => Math.max(acc, current))
 
 console.log(maxPrice)
 
+
 const itemPrices = [
-  {name: "Laptop", price: 10},
-  {name: "Ipad", price: 1022},
-  {name: "Smart Phone", price: 120},
-  {name: "Keyboard", price: 110},
-  {name: "Mouse", price: 104},
+  {name: "Laptop", price: 1000},
+  {name: "iPad", price: 700},
+  {name: "Smart Phone", price: 800},
+  {name: "Keyboard", price: 150},
 ]
 
 const sumItemPrices = itemPrices.reduce((acc, current) => acc + current.price, 0)
 
-console.log(sumItemPrices)
+console.log(sumItemPrices) 
 
-const users = ["Lorem", "Ipsum", "Derya", "Deniz", "Ipsum", "Deniz", "Lorem"]
+const users = ["Lorem", "Ipsum", "Furkan", "Talha", "Lorem", "Ipsum"]
 
 const countedUsers = users.reduce((allUsers, current) => {
   const count = allUsers[current] ?? 0;
