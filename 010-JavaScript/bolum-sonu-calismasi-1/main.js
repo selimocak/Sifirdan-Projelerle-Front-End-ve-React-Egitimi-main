@@ -52,12 +52,15 @@ localStorageColors.push(colors)
         addColorPalette(colors)
     )
 
-
-
 localStorage.setItem("colors", JSON.stringify(localStorageColors))  
 hexForm.reset()
-localStorage.removeItem("colors")
+
 }) 
+window.addEventListener("beforeunload", function () {
+    localStorage.clear();
+  });
+
+
 
 
 if (localStorageColors.length) {
@@ -89,5 +92,5 @@ colorCardItems.forEach(colorCard => {
         navigator.clipboard.writeText(colorCard.style.backgroundColor)
         alert("Renk Kopyalandi..")
     })
-})
+}) 
 
